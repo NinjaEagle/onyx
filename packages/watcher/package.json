@@ -2,11 +2,36 @@
   "name": "@onyx/watcher",
   "version": "0.0.0",
   "description": "Onyx watcher",
-  "main": "index.ts",
+  "main": "dist/main.js",
   "repository": "git@github.com:onyxjs/onyx.git",
-  "author": "Elijah Kotyluk",
+  "author": "Elijah Kotyluk <elijah@elijahkotyluk.com>",
   "license": "MIT",
+  "scripts": {
+    "lint:wotan": "wotan -m @fimbul/valtyr test/** src/** -e 'test/__snapshots__'",
+    "lint:fix": "yarn run lint:wotan --fix",
+    "test": "jest -c jest.config.js",
+    "build": "webpack -с webpack.config.js --mode production",
+    "dev": "webpack -с webpack.config.js --mode development",
+    "watch": "webpack --watch -с webpack.config.js --mode development"
+  },
   "devDependencies": {
-    "chokidar": "^3.0.2"
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-stage-2": "^7.0.0",
+    "@fimbul/valtyr": "^0.21.0",
+    "@fimbul/wotan": "^0.21.1",
+    "@types/jest": "^24.0.17",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "chokidar": "^3.0.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   }
 }
