@@ -1,0 +1,12 @@
+{
+  "name": "@onyx/watcher",
+  "version": "0.0.0",
+  "description": "Onyx watcher",
+  "main": "index.ts",
+  "repository": "git@github.com:onyxjs/onyx.git",
+  "author": "Elijah Kotyluk",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.0.2"
+  }
+}
